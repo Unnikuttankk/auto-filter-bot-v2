@@ -22,7 +22,7 @@ async def start(bot, update):
         
         if (file_id or file_type) == None:
             return
-                    )        
+                    )     
                     return
             except UserNotParticipant:
                 ident, file_id = cmd.text.split("_-_-_-_")
