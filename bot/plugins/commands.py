@@ -22,7 +22,24 @@ async def start(bot, update):
         
         if (file_id or file_type) == None:
             return
-        
+                            )
+                    return
+            except UserNotParticipant:
+                ident, file_id = cmd.text.split("_-_-_-_")
+                await bot.send_message(
+                    chat_id=cmd.from_user.id,
+                    text="**Please Join My Updates Channel to use this Bot!**",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                            ],
+                            [
+                                InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
+                            ]
+                        ]
+                    ),
+                    parse_mode="markdown"
         caption = ("<code>" + file_name + "</code>""""\n\n\n<𝐅𝐎𝐑 𝐌𝐎𝐑𝐄 𝐌𝐎𝐕𝐈𝐄𝐒 𝐉𝐎𝐈𝐍 𝐈𝐍 𝐎𝐔𝐑 𝐂𝐇𝐀𝐍𝐍𝐄𝐋:- @unlimtedmovie00</b>""")
         
         if file_type == "document":
