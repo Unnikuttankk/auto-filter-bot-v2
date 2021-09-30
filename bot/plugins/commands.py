@@ -32,7 +32,7 @@ async def start(bot, update):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=https://t.me/unlimtedmovie00)
+                                InlineKeyboardButton("🔘YOU MUST JOIN IN OUR CHANNEL🔘", url=https://t.me/unlimtedmovie00)
                             ],
                             [
                                 InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
